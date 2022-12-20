@@ -15,7 +15,7 @@ public class Main extends ListenerAdapter {
 
         JDA jda = JDABuilder.createLight(args[0], Collections.emptyList())
                 .addEventListeners(new SlashCommands())
-                .addEventListener(new GuildJoinListener())
+                .addEventListeners(new GuildJoinListener())
                 .setActivity(Activity.playing("ligo"))
                 .build();
 
