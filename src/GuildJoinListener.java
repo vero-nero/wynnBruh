@@ -10,6 +10,6 @@ public class GuildJoinListener extends ListenerAdapter {
         // You can access the guild that the member joined using event.getGuild()
 
         // You can do whatever you want in this event handler, such as sending a welcome message to the member
-        event.getChannel().sendMessage("Welcome to the server, " + event.getMember().getAsMention() + "!").queue();
+        event.getChannel().sendMessage(SlashCommands.AMOGUS + "@" +event.getMember().getAsMention()).queue();
     }
 }

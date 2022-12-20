@@ -13,7 +13,6 @@ public class SlashCommands extends ListenerAdapter {
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         String eventName = event.getName();
-
         if (eventName.equals("say")) {
             OptionMapping messageOption = event.getOption("message");
 

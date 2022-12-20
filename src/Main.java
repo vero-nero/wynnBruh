@@ -15,12 +15,13 @@ public class Main extends ListenerAdapter {
 
         JDA jda = JDABuilder.createLight(args[0], Collections.emptyList())
                 .addEventListeners(new SlashCommands())
+                .addEventListener(new GuildJoinListener())
                 .setActivity(Activity.playing("ligo"))
                 .build();
 
         jda.upsertCommand("say", "less").addOption(OptionType.STRING, "message", "Message to say").queue();
         jda.upsertCommand("ping", "Calculate ping of the bot").queue();
-        jda.upsertCommand("sussy", "Say a sussy quote").queue();
+        jda.upsertCommand("sussy", "Say a suss y quote").queue();
         jda.upsertCommand("sus", "Amogus").addOption(OptionType.STRING, "sus", "Imposter").queue();
     }
 }
